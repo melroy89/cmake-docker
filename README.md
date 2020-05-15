@@ -3,7 +3,7 @@
 All the packages you will ever need to build your C++ code with [Cmake](https://cmake.org/) in Docker.
 Optionally using the [Ninja build system](https://ninja-build.org/) and [Boost libaries](https://www.boost.org/).
 
-Including test packages (like cppcheck/cpplint and doxygen). Even Graphviz is installed for `dot` CLI tool for generating directed graphs.
+Including test packages (like `cppcheck`, `cpplint` and `doxygen`). Also `gdb`, `valgrind` and `dot` (generating directed graphs) are installed.
 
 ## Installation
 
