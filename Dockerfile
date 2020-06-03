@@ -1,5 +1,5 @@
 FROM debian:buster-slim
-LABEL maintainer="melroy@melroy.org"
+LABEL maintainer="micha.hoiting@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -17,15 +17,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     dirmngr \
     bzr \
     git \
-    mercurial \
     openssh-client \
-    subversion \
     procps \
     rpm \
     sshpass \
     cppcheck \
     valgrind \
     gdb \
+    googletest \
+    gcovr \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN pip3 install cpplint
