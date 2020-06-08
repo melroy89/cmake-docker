@@ -16,12 +16,8 @@ RUN apt-get install -y --no-install-recommends \
     wget \
     gnupg \
     dirmngr \
-    bzr \
     git \
-    mercurial \
     openssh-client \
-    subversion \
-    procps \
     rpm \
     sshpass \
     cppcheck \
