@@ -1,9 +1,10 @@
 # Cmake, Ninja, Boost, cppcheck/cpplint, Doxygen Docker Image
 
-All the packages you will ever need to build your C++ code with [Cmake](https://cmake.org/) in Docker.
-Optionally using the [Ninja build system](https://ninja-build.org/) and [Boost libaries](https://www.boost.org/).
+All the packages you will ever need to build your C++ code with [Cmake](https://cmake.org/) in a Docker container. Based on Debian Buster slim.
 
-Including test packages (like `cppcheck`, `cpplint` and `doxygen`). Also `gdb`, `valgrind` and `dot` (generating directed graphs) are installed.
+Optionally you can use the [Ninja build system](https://ninja-build.org/) and [Boost libaries](https://www.boost.org/).
+
+Image also includes test tools (like `cppcheck`, `cpplint` and `doxygen`). Also `gdb`, `valgrind` and `dot` (generating directed graphs) are installed.
 
 ## Installation
 
@@ -12,8 +13,10 @@ Including test packages (like `cppcheck`, `cpplint` and `doxygen`). Also `gdb`, 
 2. Pull the image directly from DockerHub:
 
 ```sh
-docker pull danger89/cmake
+docker pull danger89/cmake:latest
 ```
+
+*Note:* Or select a specific version, like: `danger89/cmake:3.0`
 
 ## Usage
 
