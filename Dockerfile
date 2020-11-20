@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 LABEL maintainer="melroy@melroy.org"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -23,9 +23,9 @@ RUN apt-get install -y --no-install-recommends \
     cppcheck \
     valgrind \
     gdb \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ && apt-get clean
 RUN pip3 install cpplint
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # set the locale to en_US.UTF-8
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \

@@ -16,7 +16,9 @@ Image also includes test tools (like `cppcheck`, `cpplint` and `doxygen`). Also 
 docker pull danger89/cmake:latest
 ```
 
-*Note:* Or select a specific version, like: `danger89/cmake:3.0`
+**Important:** Since tag `4.0` and higher (including `latest`), we will use Debian Bullseye Testing for GCC 10 compiler.
+
+*Note:* Select a specific version via: `danger89/cmake:3.0`
 
 ## Usage
 
