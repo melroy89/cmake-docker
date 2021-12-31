@@ -23,6 +23,7 @@ RUN apt-get install -y --no-install-recommends \
     cppcheck \
     valgrind \
     gdb \
+    clang-format \
  && apt-get clean
 RUN pip3 install cpplint
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

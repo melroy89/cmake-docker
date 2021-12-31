@@ -4,7 +4,8 @@ All the packages you will ever need to build your C++ code with [Cmake](https://
 
 Optionally you can use the [Ninja build system](https://ninja-build.org/) and [Boost libaries](https://www.boost.org/).
 
-Image also includes test tools (like `cppcheck`, `cpplint` and `doxygen`). Also `gdb`, `valgrind` and `dot` (generating directed graphs) are installed.
+Image also includes test tools (like `cppcheck`, `cpplint` and `doxygen`).  
+This Docker image also contains other useful programs, like: `gdb`, `valgrind`, `clang-format` and `dot` (generating directed graphs) are installed.
 
 ## Installation
 
@@ -33,3 +34,4 @@ Building the image yourself is also possible, via:
 ```sh
 docker build --tag danger89/cmake .
 ```
+
