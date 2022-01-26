@@ -7,8 +7,6 @@ Optionally you can use the [Ninja build system](https://ninja-build.org/) and [B
 Image also includes test tools (like `cppcheck`, `cpplint` and `doxygen`).  
 This Docker image also contains other useful programs, like: `gdb`, `valgrind`, `clang-format` and `dot` (generating directed graphs) are installed.
 
-**Update:** Since tag `5.0` the Docker image also contains virtual frame buffers (`xvfb`) package, allowing you to test the GTK even in CI/CD pipelines.
-
 ## Installation
 
 1. Install [Docker](https://www.docker.com/)

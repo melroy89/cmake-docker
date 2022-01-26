@@ -24,7 +24,6 @@ RUN apt-get install -y --no-install-recommends \
     valgrind \
     gdb \
     clang-format \
-    xvfb \
  && apt-get clean
 RUN pip3 install cpplint
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
