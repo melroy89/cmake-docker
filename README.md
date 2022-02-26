@@ -1,6 +1,6 @@
 # Cmake, Ninja, Boost, cppcheck/cpplint, Doxygen Docker Image
 
-All the packages you will ever need to build your C++ code with [Cmake](https://cmake.org/) in a Docker container. Based on Debian Buster slim.
+All the packages you will ever need to build your C++ code with [Cmake](https://cmake.org/) in a Docker container. Based on Debian Bullseye slim.
 
 Optionally you can use the [Ninja build system](https://ninja-build.org/) and [Boost libaries](https://www.boost.org/).
 
