@@ -19,7 +19,7 @@ docker pull danger89/cmake:latest
 
 **Important:** Since tag `4.0` and higher (including `latest`), we will use Debian Bullseye Testing for GCC 10 compiler.
 
-*Note:* Select a specific version via: `danger89/cmake:3.0`
+*Note:* Select a specific version. Example: `danger89/cmake:4.3`
 
 ## Usage
 
