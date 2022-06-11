@@ -17,9 +17,15 @@ This Docker image also contains other useful programs, like: `gdb`, `valgrind`, 
 docker pull danger89/cmake:latest
 ```
 
+Or use a specific tag:
+
+```sh
+docker pull danger89/cmake:4.4
+```
+
 **Important:** Since tag `4.0` and higher (including `latest`), we will use Debian Bullseye Testing for GCC 10 compiler.
 
-*Note:* Select a specific version. Example: `danger89/cmake:4.3`
+**Note:** Since tag `4.4` and higher, we build cppcheck ourselves, so we get the [latest stable cppcheck](https://cppcheck.sourceforge.io/).
 
 ## Usage
 
@@ -34,4 +40,3 @@ Building the image yourself is also possible, via:
 ```sh
 docker build --tag danger89/cmake .
 ```
-
