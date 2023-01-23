@@ -8,12 +8,12 @@ RUN apt-get --allow-releaseinfo-change update
 RUN apt-get update && apt-get upgrade -y
 
 # APT install (base) packages
-RUN apt-get install -y build-essential cmake libboost-all-dev pkg-config                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+RUN apt-get install -y build-essential cmake libboost-all-dev pkg-config
 RUN apt-get install -y ninja-build doxygen graphviz
 RUN apt-get install -y --no-install-recommends curl wget
 
 # Get cppcheck dependencies from stable; that's good enough
-RUN echo "deb-src http://deb.debian.org/debian bullseye main" >> /etc/apt/sources.list
+RUN echo "deb-src http://deb.debian.org/debian bullseye main" >>/etc/apt/sources.list
 RUN apt-get update
 RUN apt-get build-dep -y cppcheck
 # Download cppcheck source code, build and install
@@ -40,15 +40,17 @@ RUN apt-get install -y --no-install-recommends \
     sshpass \
     valgrind \
     gdb \
-    clang-format \
- && apt-get clean
+    clang-format && \
+    apt-get clean
 # Install cpplint via pip
 RUN pip3 install cpplint
 # Clean-up
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# Clean-up manual build(s)
+RUN rm -rf cppcheck.tar.gz && rm -rf cppcheck-2.9
 
 # set the locale to en_US.UTF-8
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
+RUN echo "en_US.UTF-8 UTF-8" >/etc/locale.gen && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
     update-locale LANG=en_US.UTF-8
