@@ -17,9 +17,9 @@ RUN echo "deb-src http://deb.debian.org/debian bullseye main" >>/etc/apt/sources
 RUN apt-get update
 RUN apt-get build-dep -y cppcheck
 # Download cppcheck source code, build and install
-RUN wget -O cppcheck.tar.gz https://github.com/danmar/cppcheck/archive/2.9.tar.gz
+RUN wget -O cppcheck.tar.gz https://github.com/danmar/cppcheck/archive/2.10.tar.gz
 RUN tar -xvzf cppcheck.tar.gz
-RUN cd cppcheck-2.9 && \
+RUN cd cppcheck-2.10 && \
     mkdir build && \
     cd build && \
     cmake .. && \
