@@ -40,7 +40,8 @@ RUN apt-get install -y --no-install-recommends \
     sshpass \
     valgrind \
     gdb \
-    clang-format && \
+    clang-format \
+    libssl-dev && \
     apt-get clean
 # Install cpplint via pip
 RUN pip3 install cpplint --break-system-packages
