@@ -22,7 +22,7 @@ RUN tar -xvzf cppcheck.tar.gz
 RUN cd cppcheck-2.12.1 && \
     mkdir build && \
     cd build && \
-    cmake .. && \
+    cmake -DUSE_MATCHCOMPILER=ON .. && \
     cmake --build . && \
     cmake --install .
 
