@@ -17,9 +17,9 @@ RUN echo "deb-src http://deb.debian.org/debian bookworm main" >>/etc/apt/sources
 RUN apt-get update
 RUN apt-get build-dep -y cppcheck
 # Download cppcheck source code, build and install
-RUN wget -O cppcheck.tar.gz https://github.com/danmar/cppcheck/archive/2.12.1.tar.gz
+RUN wget -O cppcheck.tar.gz https://github.com/danmar/cppcheck/archive/2.10.tar.gz
 RUN tar -xvzf cppcheck.tar.gz
-RUN cd cppcheck-2.12.1 && \
+RUN cd cppcheck-2.10 && \
     mkdir build && \
     cd build && \
     cmake -DUSE_MATCHCOMPILER=ON .. && \
@@ -47,7 +47,7 @@ RUN pip3 install cpplint --break-system-packages
 # Clean-up
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Clean-up manual build(s)
-RUN rm -rf cppcheck.tar.gz && rm -rf cppcheck-2.12.1
+RUN rm -rf cppcheck.tar.gz && rm -rf cppcheck-2.10
 
 # set the locale to en_US.UTF-8
 RUN echo "en_US.UTF-8 UTF-8" >/etc/locale.gen && \
