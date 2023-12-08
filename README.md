@@ -20,12 +20,14 @@ docker pull danger89/cmake:latest
 Or use a specific tag:
 
 ```sh
-docker pull danger89/cmake:4.5
+docker pull danger89/cmake:5.0
 ```
 
-**Important:** Since tag `4.0` and higher (including `latest`), we will use Debian Bullseye Testing for GCC 10 compiler.
+**Note:** Since tag `4.0` and until tag `4.6`, Debian Bullseye was used for GCC 10 compiler.
 
 **Note:** Since tag `4.4` and higher, we build cppcheck ourselves, so we get the [latest stable cppcheck](https://cppcheck.sourceforge.io/).
+
+**Important:** Since tag `5.0` and higher (including `latest` tag) the base image is now based on Debian Bookworm instead of Bullseye. We're now using GCC/G++ v12 with CMake v3.25.
 
 ## Usage
 
