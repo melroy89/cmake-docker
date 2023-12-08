@@ -43,7 +43,7 @@ RUN apt-get install -y --no-install-recommends \
     clang-format && \
     apt-get clean
 # Install cpplint via pip
-RUN pip3 install cpplint
+RUN pip3 install cpplint --break-system-packages
 # Clean-up
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Clean-up manual build(s)
