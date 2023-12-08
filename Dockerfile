@@ -23,7 +23,7 @@ RUN cd cppcheck-2.10 && \
     mkdir build && \
     cd build && \
     cmake -DUSE_MATCHCOMPILER=ON .. && \
-    cmake --build . && \
+    cmake --build . -- -j 8 && \
     cmake --install .
 
 # APT install additional packages
