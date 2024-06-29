@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 LABEL maintainer="melroy@melroy.org"
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # APT Update
 RUN apt-get --allow-releaseinfo-change update
@@ -55,4 +55,4 @@ RUN echo "en_US.UTF-8 UTF-8" >/etc/locale.gen && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales && \
     update-locale LANG=en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
