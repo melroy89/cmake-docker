@@ -20,7 +20,7 @@ docker pull danger89/cmake:latest
 Or use a specific tag:
 
 ```sh
-docker pull danger89/cmake:5.0
+docker pull danger89/cmake:5.1
 ```
 
 **Note:** Since tag `4.0` and until tag `4.6`, Debian Bullseye was used for GCC 10 compiler.
