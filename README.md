@@ -2,7 +2,7 @@
 
 All the packages you will ever need to build your modern C++ code with [Cmake](https://cmake.org/) in a Docker container. Based on Debian Bookworm slim.
 
-Optionally you can use the [Ninja build system](https://ninja-build.org/) and [Boost libaries](https://www.boost.org/).
+Optionally you can use the [Ninja build system](https://ninja-build.org/) and [Boost libraries](https://www.boost.org/).
 
 The image also includes test tools (like `cppcheck`, `cpplint` and `doxygen`).  
 This Docker image also contains other useful programs, like: `gdb`, `valgrind`, `clang-format` and `dot` (generating directed graphs) are installed.
