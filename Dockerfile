@@ -48,7 +48,7 @@ RUN pip3 install cpplint --break-system-packages
 # Clean-up
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Clean-up manual build(s)
-RUN rm -rf cppcheck.tar.gz && rm -rf cppcheck-2.10
+RUN rm -rf cppcheck.tar.gz && rm -rf cppcheck-2.14.2
 
 # set the locale to en_US.UTF-8
 RUN echo "en_US.UTF-8 UTF-8" >/etc/locale.gen && \
